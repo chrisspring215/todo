@@ -1,0 +1,80 @@
+$primary-color-dark: #f50057;
+$white: #ffffff;
+
+$primary-font: 'Roboto', sans-serif;
+
+/* OVERRIDES FOUNDATIONS BUTTON STYLES */
+*
+{
+	font-family: $primary-font;
+}
+
+button
+{
+	background: none;
+	border: .2em solid $white;
+	color: #333;
+	font-weight: bold;
+}
+
+button:hover, button:focus
+{
+	border: .2em solid $primary-color-dark;
+	color: $primary-color-dark;
+	background: none;
+
+}
+
+
+header
+{
+	padding-top:    .25em;
+	padding-bottom: .25em;
+	background-color: $primary-color-dark;
+	color: $white;
+
+	.app-header-title
+	{		
+		font-weight: bold;
+	}
+}
+
+main
+{
+	.collapsed > *
+	{
+		border-bottom: 1px solid #ccc;
+	}
+
+	.create-task-interface
+	{
+		padding-top: .75em;
+
+		label
+		{
+			font-weight: bold;
+		}
+
+		button
+		{
+			margin-left: .25em;
+		}
+	}
+
+	.task-list
+	{
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+
+
+		li
+		{
+			border-bottom:  1px solid #ccc;
+			padding-top:    .5em;
+			padding-bottom: .5em;
+			padding-left:   1em;
+			margin-left: 0;
+		}
+	}
+}
