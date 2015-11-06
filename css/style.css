@@ -11038,65 +11038,108 @@ th.hide-for-touch {
   }
 }
 /* OVERRIDES FOUNDATIONS BUTTON STYLES */
-/* line 8, ../scss/_custom.scss */
+/* line 10, ../scss/_custom.scss */
 * {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 13, ../scss/_custom.scss */
+/* line 15, ../scss/_custom.scss */
 button {
   background: none;
   border: 0.2em solid white;
   color: #333;
   font-weight: bold;
+  transition: color 100ms ease-in, border 100ms ease-in, box-shadow 100ms ease-in;
 }
 
-/* line 21, ../scss/_custom.scss */
+/* line 24, ../scss/_custom.scss */
 button:hover, button:focus {
   border: 0.2em solid #f50057;
   color: #f50057;
   background: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: color 200ms ease-in, border 200ms ease-in, box-shadow 200ms ease-in;
 }
 
-/* line 30, ../scss/_custom.scss */
+/* line 34, ../scss/_custom.scss */
 header {
   padding-top: .25em;
   padding-bottom: .25em;
   background-color: #f50057;
   color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
 }
-/* line 37, ../scss/_custom.scss */
+/* line 44, ../scss/_custom.scss */
 header .app-header-title {
   font-weight: bold;
 }
+/* line 49, ../scss/_custom.scss */
+header .rotate {
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
 
-/* line 45, ../scss/_custom.scss */
+/* line 59, ../scss/_custom.scss */
 main .collapsed > * {
   border-bottom: 1px solid #ccc;
 }
-/* line 50, ../scss/_custom.scss */
+/* line 64, ../scss/_custom.scss */
 main .create-task-interface {
-  padding-top: .75em;
+  padding-top: 1.25em;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
 }
-/* line 54, ../scss/_custom.scss */
+/* line 70, ../scss/_custom.scss */
 main .create-task-interface label {
   font-weight: bold;
 }
-/* line 59, ../scss/_custom.scss */
+/* line 75, ../scss/_custom.scss */
+main .create-task-interface input, main .create-task-interface select {
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #eee;
+  box-shadow: none;
+  background: none;
+  outline: 0;
+}
+/* line 85, ../scss/_custom.scss */
+main .create-task-interface input:focus, main .create-task-interface input:active, main .create-task-interface select:focus, main .create-task-interface select:active {
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #f50057;
+  background: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
+  outline: 0;
+}
+/* line 95, ../scss/_custom.scss */
 main .create-task-interface button {
   margin-left: .25em;
 }
-/* line 65, ../scss/_custom.scss */
+/* line 100, ../scss/_custom.scss */
+main .create-task-interface .add-task-button {
+  color: #f50057;
+}
+/* line 106, ../scss/_custom.scss */
 main .task-list {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
+  padding-top: .25em;
 }
-/* line 72, ../scss/_custom.scss */
+/* line 114, ../scss/_custom.scss */
 main .task-list li {
   border-bottom: 1px solid #ccc;
-  padding-top: .5em;
+  padding-top: .75em;
   padding-bottom: .5em;
   padding-left: 1em;
   margin-left: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+/* line 124, ../scss/_custom.scss */
+main .task-list .task-name {
+  font-weight: bold;
+  color: #f50057;
 }

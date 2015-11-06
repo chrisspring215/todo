@@ -3,6 +3,8 @@ $white: #ffffff;
 
 $primary-font: 'Roboto', sans-serif;
 
+$shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.05);
+
 /* OVERRIDES FOUNDATIONS BUTTON STYLES */
 *
 {
@@ -15,6 +17,7 @@ button
 	border: .2em solid $white;
 	color: #333;
 	font-weight: bold;
+	transition: color 100ms ease-in, border 100ms ease-in, box-shadow 100ms ease-in;
 }
 
 button:hover, button:focus
@@ -22,7 +25,8 @@ button:hover, button:focus
 	border: .2em solid $primary-color-dark;
 	color: $primary-color-dark;
 	background: none;
-
+	box-shadow: $shadow;
+	transition: color 200ms ease-in, border 200ms ease-in, box-shadow 200ms ease-in;
 }
 
 
@@ -32,10 +36,20 @@ header
 	padding-bottom: .25em;
 	background-color: $primary-color-dark;
 	color: $white;
+	box-shadow: $shadow;
+	
+
 
 	.app-header-title
 	{		
 		font-weight: bold;
+	}
+
+	.rotate
+	{
+		-ms-transform: rotate(45deg); /* IE 9 */
+		-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+		transform: rotate(45deg);
 	}
 }
 
@@ -48,16 +62,43 @@ main
 
 	.create-task-interface
 	{
-		padding-top: .75em;
+		padding-top: 1.25em;
+		border-bottom: 1px solid #eee;
+		box-shadow: $shadow;
 
 		label
 		{
 			font-weight: bold;
 		}
 
+		input, select
+		{
+			box-shadow: none;
+			border: none;
+			border-bottom: 2px solid #eee;
+			box-shadow: none;
+			background: none;
+			outline: 0;
+		}
+
+		input:focus, input:active, select:focus, select:active
+		{
+			box-shadow: none;
+			border: none;
+			border-bottom: 2px solid $primary-color-dark;
+			background: none;
+			box-shadow: $shadow;
+			outline: 0;
+		}
+
 		button
 		{
 			margin-left: .25em;
+		}
+
+		.add-task-button
+		{
+			color: $primary-color-dark;
 		}
 	}
 
@@ -66,15 +107,23 @@ main
 		list-style-type: none;
 		margin-left: 0;
 		padding-left: 0;
+		padding-top: .25em;
 
 
 		li
 		{
 			border-bottom:  1px solid #ccc;
-			padding-top:    .5em;
+			padding-top:    .75em;
 			padding-bottom: .5em;
 			padding-left:   1em;
 			margin-left: 0;
+			box-shadow: $shadow;
+		}
+
+		.task-name
+		{
+			font-weight: bold;
+			color: $primary-color-dark;
 		}
 	}
 }
