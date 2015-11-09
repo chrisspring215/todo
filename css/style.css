@@ -11061,7 +11061,7 @@ button:hover, button:focus {
   transition: color 200ms ease-in, border 200ms ease-in, box-shadow 200ms ease-in;
 }
 
-/* line 34, ../scss/_custom.scss */
+/* line 33, ../scss/_custom.scss */
 header {
   padding-top: .25em;
   padding-bottom: .25em;
@@ -11069,11 +11069,11 @@ header {
   color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
 }
-/* line 44, ../scss/_custom.scss */
+/* line 43, ../scss/_custom.scss */
 header .app-header-title {
   font-weight: bold;
 }
-/* line 49, ../scss/_custom.scss */
+/* line 48, ../scss/_custom.scss */
 header .rotate {
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -11082,19 +11082,20 @@ header .rotate {
   transform: rotate(45deg);
 }
 
-/* line 59, ../scss/_custom.scss */
+/* line 58, ../scss/_custom.scss */
 main .collapsed > * {
   border-bottom: 1px solid #ccc;
 }
-/* line 64, ../scss/_custom.scss */
+/* line 63, ../scss/_custom.scss */
 main .create-task-interface {
   padding-top: 1.25em;
   border-bottom: 1px solid #eee;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
 }
-/* line 70, ../scss/_custom.scss */
+/* line 69, ../scss/_custom.scss */
 main .create-task-interface label {
   font-weight: bold;
+  color: #aaa;
 }
 /* line 75, ../scss/_custom.scss */
 main .create-task-interface input, main .create-task-interface select {
@@ -11115,21 +11116,32 @@ main .create-task-interface input:focus, main .create-task-interface input:activ
   outline: 0;
 }
 /* line 95, ../scss/_custom.scss */
+main .create-task-interface .init-priority-option {
+  color: #eeeeee;
+}
+/* line 100, ../scss/_custom.scss */
 main .create-task-interface button {
   margin-left: .25em;
 }
-/* line 100, ../scss/_custom.scss */
+/* line 105, ../scss/_custom.scss */
 main .create-task-interface .add-task-button {
   color: #f50057;
 }
-/* line 106, ../scss/_custom.scss */
+/* line 110, ../scss/_custom.scss */
+main .create-task-interface button.disabled {
+  border: 0.2em solid white;
+  color: #ccc;
+  background: none;
+  box-shadow: none;
+}
+/* line 120, ../scss/_custom.scss */
 main .task-list {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   padding-top: .25em;
 }
-/* line 114, ../scss/_custom.scss */
+/* line 128, ../scss/_custom.scss */
 main .task-list li {
   border-bottom: 1px solid #ccc;
   padding-top: .75em;
@@ -11138,7 +11150,7 @@ main .task-list li {
   margin-left: 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
 }
-/* line 124, ../scss/_custom.scss */
+/* line 138, ../scss/_custom.scss */
 main .task-list .task-name {
   font-weight: bold;
   color: #f50057;

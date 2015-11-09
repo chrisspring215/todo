@@ -25,19 +25,21 @@
         <div class="small-12 columns">
 
           <label for="taskName">Task Name
-            <input name="taskName" type="text" id="taskName" placeholder="Hello World">
+            <input name="taskName" type="text" id="taskName" onchange="showTaskPriority()" tabindex="1">
           </label>
 
-          <label for="taskPriority">Priority
-            <select name="taskPriority">
+          <label for="taskPriority" id="taskPriority" class="hide">Priority
+            <select name="taskPriority" onchange="showAddButton()" tabindex="2">
+              <option id="initPriorityOption" disabled class="init-priority-option">Set a priority level</option>
               <option>Low</option>
               <option>Medium</option>
               <option>High</option>
             </select> 
           </label>
 
-          <button type="button" class="tiny radius right add-task-button" onclick="addTask()">ADD</button>
-          <button class="tiny radius right" onclick="hideCreateTaskInterface()">CLOSE</button>
+          <button type="button" class="tiny radius right add-task-button disabled" id="addButton" disabled onclick="addTask()"  tabindex="3">ADD</button>
+
+          <button class="tiny radius right" onclick="hideCreateTaskInterface()"  tabindex="4">CLOSE</button>
           
         </div>
       </div>

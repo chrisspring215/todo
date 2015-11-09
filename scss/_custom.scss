@@ -29,7 +29,6 @@ button:hover, button:focus
 	transition: color 200ms ease-in, border 200ms ease-in, box-shadow 200ms ease-in;
 }
 
-
 header
 {
 	padding-top:    .25em;
@@ -69,6 +68,7 @@ main
 		label
 		{
 			font-weight: bold;
+			color: #aaa;
 		}
 
 		input, select
@@ -91,6 +91,11 @@ main
 			outline: 0;
 		}
 
+		.init-priority-option
+		{
+			color: #ccc;
+		}
+
 		button
 		{
 			margin-left: .25em;
@@ -100,6 +105,15 @@ main
 		{
 			color: $primary-color-dark;
 		}
+
+		button.disabled
+		{
+			border: .2em solid $white;
+			color: #ccc;
+			background: none;
+			box-shadow: none;
+		}
+
 	}
 
 	.task-list
